@@ -39,9 +39,9 @@ const JWTLogin = () => {
     const { login } = useAuth();
     const scriptedRef = useScriptRef();
 
-    const [checked, setChecked] = React.useState(true);
+    const [ checked, setChecked ] = React.useState(true);
 
-    const [showPassword, setShowPassword] = React.useState(false);
+    const [ showPassword, setShowPassword ] = React.useState(false);
     const handleClickShowPassword = () => {
         setShowPassword(!showPassword);
     };
@@ -63,7 +63,7 @@ const JWTLogin = () => {
             })}
             onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
                 try {
-                    await login(values.email);
+                    await login(values.email, values.password);
 
                     if (scriptedRef.current) {
                         setStatus({ success: true });
