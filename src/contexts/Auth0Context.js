@@ -24,7 +24,7 @@ const initialState = {
 const Auth0Context = createContext(null);
 
 export const Auth0Provider = ({ children }) => {
-    const [state, dispatch] = useReducer(accountReducer, initialState);
+    const [ state, dispatch ] = useReducer(accountReducer, initialState);
 
     useEffect(() => {
         const init = async () => {
@@ -98,9 +98,9 @@ export const Auth0Provider = ({ children }) => {
         });
     };
 
-    const resetPassword = () => {};
+    const resetPassword = () => { };
 
-    const updateProfile = () => {};
+    const updateProfile = () => { };
 
     if (state.isInitialized !== undefined && !state.isInitialized) {
         return <Loader />;
