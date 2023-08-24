@@ -39,8 +39,8 @@ const JWTLogin = () => {
     const { login } = useAuth();
     const scriptedRef = useScriptRef();
 
-    const [ checked, setChecked ] = React.useState(true);
-    const [ showPassword, setShowPassword ] = React.useState(false);
+    const [checked, setChecked] = React.useState(true);
+    const [showPassword, setShowPassword] = React.useState(false);
     const handleClickShowPassword = () => {
         setShowPassword(!showPassword);
     };
